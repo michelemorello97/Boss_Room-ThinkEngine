@@ -1,5 +1,215 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2772730957116330237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6822163574402300626}
+  - component: {fileID: 6844738112045223362}
+  - component: {fileID: 3159038709209005361}
+  - component: {fileID: 7499425213119277279}
+  m_Layer: 0
+  m_Name: FieldofView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6822163574402300626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2772730957116330237}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6009713983291384766}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6844738112045223362
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2772730957116330237}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2, z: 10}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &3159038709209005361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2772730957116330237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518e953047752854ca671f765631f59d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  view: []
+  pos: []
+--- !u!114 &7499425213119277279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2772730957116330237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1612528518, guid: 06783fc4099d1e04ba318698c43e592c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _savedProperties:
+  - myStrings:
+    - FieldOfView
+    Count: 1
+  - myStrings:
+    - FieldOfView
+    - view
+    Count: 2
+  - myStrings:
+    - FieldOfView
+    - view
+    - GameObject
+    - tag
+    Count: 4
+  - myStrings:
+    - FieldOfView
+    - pos
+    Count: 2
+  - myStrings:
+    - FieldOfView
+    - pos
+    - Vector3Int
+    - x
+    Count: 4
+  - myStrings:
+    - FieldOfView
+    - pos
+    - Vector3Int
+    - y
+    Count: 4
+  - myStrings:
+    - FieldOfView
+    - pos
+    - Vector3Int
+    - z
+    Count: 4
+  _toMapProperties:
+  - myStrings:
+    - FieldOfView
+    - view
+    - GameObject
+    - tag
+    Count: 4
+  - myStrings:
+    - FieldOfView
+    - pos
+    - Vector3Int
+    - x
+    Count: 4
+  - myStrings:
+    - FieldOfView
+    - pos
+    - Vector3Int
+    - y
+    Count: 4
+  - myStrings:
+    - FieldOfView
+    - pos
+    - Vector3Int
+    - z
+    Count: 4
+  _propertyFeatures:
+  - property:
+      myStrings:
+      - FieldOfView
+      - view
+      - GameObject
+      - tag
+      Count: 4
+    windowWidth: 1
+    configurationName: 
+    _propertyAlias: Entity_tag
+    propertyAliasHash: -322770298
+    operation: 0
+    specificValue: 
+    counter: 0
+  - property:
+      myStrings:
+      - FieldOfView
+      - pos
+      - Vector3Int
+      - x
+      Count: 4
+    windowWidth: 1
+    configurationName: 
+    _propertyAlias: Entity_x
+    propertyAliasHash: 1441829390
+    operation: 0
+    specificValue: 
+    counter: 0
+  - property:
+      myStrings:
+      - FieldOfView
+      - pos
+      - Vector3Int
+      - y
+      Count: 4
+    windowWidth: 1
+    configurationName: 
+    _propertyAlias: Entity_y
+    propertyAliasHash: -124254551
+    operation: 0
+    specificValue: 
+    counter: 0
+  - property:
+      myStrings:
+      - FieldOfView
+      - pos
+      - Vector3Int
+      - z
+      Count: 4
+    windowWidth: 1
+    configurationName: 
+    _propertyAlias: Entity_z
+    propertyAliasHash: -1690338492
+    operation: 0
+    specificValue: 
+    counter: 0
+  _configurationName: fieldofView
+  isInvariant: 0
+  isFixedSize: 0
+  _serializableSensorsTypes: []
+  recompile: 0
+  teRecompile: 0
+  generatedScripts:
+  - Entity_tag.cs
+  - Entity_x.cs
+  - Entity_y.cs
+  - Entity_z.cs
 --- !u!1 &9073758047842524076
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4600110157238723790, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 3737985212
+      value: 3177087589
       objectReference: {fileID: 0}
     - target: {fileID: 4600110157238723790, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
       propertyPath: PrefabHashGenerator
@@ -469,6 +679,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4600110157238723791, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7902288483105483375}
+    - targetCorrespondingSourceObject: {fileID: 4600110157238723791, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6822163574402300626}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4600110157238723781, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
       insertIndex: -1
@@ -497,6 +710,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4600110157238723781, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7232939173259361562}
+    - targetCorrespondingSourceObject: {fileID: 4600110157238723781, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1342566637938453946}
+    - targetCorrespondingSourceObject: {fileID: 4600110157238723781, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5268792824971188697}
+    - targetCorrespondingSourceObject: {fileID: 4600110157238723781, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1528082166257919117}
+    - targetCorrespondingSourceObject: {fileID: 4600110157238723781, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6408810363794174644}
+    - targetCorrespondingSourceObject: {fileID: 4600110157238723781, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5307331597919575982}
   m_SourcePrefab: {fileID: 100100000, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}
 --- !u!114 &741733315856861890 stripped
 MonoBehaviour:
@@ -586,6 +814,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ServerCharacter: {fileID: 741733315856861890}
   m_PhysicsWrapper: {fileID: 6116655102486013040}
+  m_x: 0
+  m_z: 0
   m_Playerculopesante: {fileID: 6009713983291384766}
 --- !u!114 &4887850889182527394
 MonoBehaviour:
@@ -640,6 +870,165 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FeedbackPrefab: {fileID: 9137928905311479176, guid: 5d22c1d86e0e5604cbe14004bf924827, type: 3}
+--- !u!114 &1342566637938453946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6009713983291384756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1612528518, guid: 06783fc4099d1e04ba318698c43e592c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _savedProperties:
+  - myStrings:
+    - FloattoInt
+    - x
+    Count: 2
+  - myStrings:
+    - FloattoInt
+    - y
+    Count: 2
+  - myStrings:
+    - FloattoInt
+    - z
+    Count: 2
+  - myStrings:
+    - FloattoInt
+    Count: 1
+  _toMapProperties:
+  - myStrings:
+    - FloattoInt
+    - x
+    Count: 2
+  - myStrings:
+    - FloattoInt
+    - y
+    Count: 2
+  - myStrings:
+    - FloattoInt
+    - z
+    Count: 2
+  _propertyFeatures:
+  - property:
+      myStrings:
+      - FloattoInt
+      - x
+      Count: 2
+    windowWidth: 1
+    configurationName: Player
+    _propertyAlias: Player_x
+    propertyAliasHash: -719706128
+    operation: 0
+    specificValue: 
+    counter: 0
+  - property:
+      myStrings:
+      - FloattoInt
+      - y
+      Count: 2
+    windowWidth: 1
+    configurationName: Player
+    _propertyAlias: Player_y
+    propertyAliasHash: 846377813
+    operation: 0
+    specificValue: 
+    counter: 0
+  - property:
+      myStrings:
+      - FloattoInt
+      - z
+      Count: 2
+    windowWidth: 1
+    configurationName: Player
+    _propertyAlias: Player_z
+    propertyAliasHash: 443093286
+    operation: 0
+    specificValue: 
+    counter: 0
+  _configurationName: Player
+  isInvariant: 0
+  isFixedSize: 0
+  _serializableSensorsTypes: []
+  recompile: 0
+  teRecompile: 0
+  generatedScripts:
+  - Player_x.cs
+  - Player_y.cs
+  - Player_z.cs
+--- !u!114 &5268792824971188697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6009713983291384756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1212236918, guid: 06783fc4099d1e04ba318698c43e592c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1528082166257919117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6009713983291384756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1504054938, guid: 06783fc4099d1e04ba318698c43e592c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priorityExecuting: 0
+--- !u!114 &-6408810363794174644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6009713983291384756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 383103547, guid: 06783fc4099d1e04ba318698c43e592c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  borning: 0
+  enableBrain: 1
+  debug: 0
+  maintainInputFile: 1
+  _chosenSensorConfigurations:
+  - Player
+  - fieldofView
+  AIFilesPath: C:/Users/miche/Desktop/TESI Artificial intelligenze and Unity/project
+    NEW/Boss_Room-ThinkEngine/Assets/StreamingAssets\ThinkEngineer\ThinkEngine
+  AIFilesPrefix:
+  - Player
+  prefabBrain: 1
+  solverEnum: 1
+  _executeReasonerOn: When Sensors are ready
+  specificAIFile: 0
+  globalAIFile: 0
+  solver_options: []
+  _priority: 0
+--- !u!114 &5307331597919575982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6009713983291384756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77013c7a9f0d9724ea103c2feff872a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6009713983291384766}
+  x: 0
+  y: 0
+  z: 0
 --- !u!4 &6009713983291384766 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4600110157238723791, guid: 0d2d836e2e83b754fa1a1c4022d6d65d, type: 3}

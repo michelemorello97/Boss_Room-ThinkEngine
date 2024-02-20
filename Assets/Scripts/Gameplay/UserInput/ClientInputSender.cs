@@ -155,12 +155,17 @@ namespace Unity.BossRoom.Gameplay.UserInput
             m_ActionLayerMask = LayerMask.GetMask(new[] { "PCs", "NPCs", "Ground" });
 
             m_RaycastHitComparer = new RaycastHitComparer();
-            InvokeRepeating("TestWorld", 3.0f, 3.0f);
+           // InvokeRepeating("TestWorld", 3.0f, 3.0f);
         }
 
-        void TestWorld()
+        public float m_x; //aggiunti io
+        public float m_z;
+
+        public void TestWorld(float x, float z)
         {
-            Debug.Log("WEWE");
+            // Debug.Log("WEWE");
+            m_x = x;
+            m_z = z;
             m_MoveRequest = true;
         }
 
@@ -221,6 +226,8 @@ namespace Unity.BossRoom.Gameplay.UserInput
         [SerializeField]
         Transform m_Playerculopesante;
 
+        
+
         void FixedUpdate()
         {
             //play all ActionRequests, in FIFO order.
@@ -259,15 +266,14 @@ namespace Unity.BossRoom.Gameplay.UserInput
 
             if (m_MoveRequest)
             {
-                RequestAction(CharacterClass.Skill1.ActionID, SkillTriggerStyle.MouseClick);
+                //RequestAction(CharacterClass.Skill1.ActionID, SkillTriggerStyle.MouseClick);
                 m_MoveRequest = false;
-                float x = UnityEngine.Random.Range(-2.0f, 2.0f);
-                float z = UnityEngine.Random.Range(-2.0f, 2.0f);
+                
                 Vector3 test = new Vector3();
-                test.x = m_Playerculopesante.position.x + x;
-                test.z = m_Playerculopesante.position.z + z;
+                test.x =  m_x;
+                test.z =  m_z;
                 test.y = m_Playerculopesante.position.y;
-                Debug.Log("DOVREI MUVERMI IN: " + test.x + " " + test.z);
+               // Debug.Log("DOVREI MUVERMI IN: " + test.x + " " + test.z);
                 m_ServerCharacter.SendCharacterInputServerRpc(test);
                 ClientMoveEvent?.Invoke(test);
 
