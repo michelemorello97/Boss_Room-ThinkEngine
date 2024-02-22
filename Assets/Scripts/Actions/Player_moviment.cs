@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using ThinkEngine.Planning;
+using Unity.BossRoom.Gameplay.GameplayObjects.Character;
 using Unity.BossRoom.Gameplay.UserInput;
 using UnityEngine;
 
@@ -11,15 +12,19 @@ namespace Unity.Multiplayer.Samples.BossRoom
         public int x { get; set; }
         public int z { get; set; }
 
+        public ulong id { get; set; }
+        
+        
         GameObject player; 
         public override void Do()
         {
-            player = GameObject.Find("PlayerAvatar0");
+            Debug.Log("sono il PlayerAvatar" + id);
+            player = GameObject.Find("PlayerAvatar" + id);
             if (player != null)
             {
                 ClientInputSender script2 = player.GetComponent<ClientInputSender>();
 
-                // Assicurarsi che lo script2 sia presente
+
                 if (script2 != null)
                 {
                     float x_m = x / 100f;
@@ -30,7 +35,7 @@ namespace Unity.Multiplayer.Samples.BossRoom
                 else
                 {
                     Debug.LogError("ClientInputSender non trovato su PlayerAvatar.");
-                }
+                }  
             }
             else
             {

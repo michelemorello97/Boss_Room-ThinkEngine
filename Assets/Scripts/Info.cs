@@ -1,39 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
-using Unity.Netcode;
+using Unity.BossRoom.Gameplay.GameplayObjects;
 using Unity.BossRoom.Gameplay.GameplayObjects.Character;
 using Unity.BossRoom.Utils;
-using Unity.Collections;
-using Unity.BossRoom.Gameplay.GameplayObjects;
+using Unity.Netcode;
+using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace Unity.Multiplayer.Samples.BossRoom
 {
-    public class NetworkChat : NetworkBehaviour
+    public class Info : MonoBehaviour
     {
-
         [SerializeField] ClientPlayerAvatarRuntimeCollection m_PlayerAvatars;
-        [SerializeField] private TMP_Text textArea;
-        [SerializeField] private TMP_InputField textInput;
+
         ServerCharacter m_OwnedServerCharacter;
 
         ClientPlayerAvatar m_OwnedPlayerAvatar;
 
-        string m_name;
+        public string m_name;
 
-        ulong m_id;
-        // Start is called before the first frame update
-        void Start()
-        {
-            textArea.SetText("");
-        }
+        public ulong m_id;
+       
 
         void Awake()
         {
             m_PlayerAvatars.ItemAdded += PlayerAvatarAdded;
-            
+            //InvokeRepeating("stampa", 3.0f, 3.0f);
+        }
+
+        void stampa()
+        {
+            Debug.Log("nome = " + m_name + "ID = " + m_id);
         }
 
         void PlayerAvatarAdded(ClientPlayerAvatar clientPlayerAvatar)
@@ -64,38 +61,14 @@ namespace Unity.Multiplayer.Samples.BossRoom
             return networkName.Name.Value;
         }
 
-        public void SendMessage()
+        public string getName()
         {
-            if (textInput.text.Equals("") == false)
-            {
-                
-                AddTextServerRPC(m_name+ m_id + ":- " + textInput.text);
-                textInput.SetTextWithoutNotify("");
-            }
+            return m_name;
         }
 
-        [ServerRpc(RequireOwnership = false)]
-        void AddTextServerRPC(string text)
+        public ulong getId()
         {
-            AddTextClientRPC(text);
-        }
-
-        [ClientRpc]
-        void AddTextClientRPC(string text)
-        {
-            AddText(text);
-        }
-
-        void AddText(string chat)
-        {
-            string lastText = textArea.text;
-            textArea.SetText(lastText + "\n" + chat);
-        }
-
-        public override void OnNetworkDespawn()
-        {
-            textArea.SetText("");
-            base.OnNetworkDespawn();
+            return m_id;
         }
     }
 }

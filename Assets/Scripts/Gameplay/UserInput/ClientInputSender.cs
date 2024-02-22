@@ -116,7 +116,7 @@ namespace Unity.BossRoom.Gameplay.UserInput
 
         public System.Action action1ModifiedCallback;
 
-        ServerCharacter m_TargetServerCharacter;
+        public ServerCharacter m_TargetServerCharacter;
 
         void Awake()
         {
@@ -169,6 +169,11 @@ namespace Unity.BossRoom.Gameplay.UserInput
             m_MoveRequest = true;
         }
 
+        public void setTarget(ServerCharacter target)
+        {
+            this.m_TargetServerCharacter = target;
+        }
+
         public override void OnNetworkDespawn()
         {
             if (m_ServerCharacter)
@@ -185,6 +190,7 @@ namespace Unity.BossRoom.Gameplay.UserInput
 
         void OnTargetChanged(ulong previousValue, ulong newValue)
         {
+            
             if (m_TargetServerCharacter)
             {
                 m_TargetServerCharacter.NetLifeState.LifeState.OnValueChanged -= OnTargetLifeStateChanged;
@@ -197,7 +203,7 @@ namespace Unity.BossRoom.Gameplay.UserInput
             {
                 m_TargetServerCharacter.NetLifeState.LifeState.OnValueChanged += OnTargetLifeStateChanged;
             }
-
+            
             UpdateAction1();
         }
 

@@ -814,6 +814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ServerCharacter: {fileID: 741733315856861890}
   m_PhysicsWrapper: {fileID: 6116655102486013040}
+  m_TargetServerCharacter: {fileID: 0}
   m_x: 0
   m_z: 0
   m_Playerculopesante: {fileID: 6009713983291384766}
@@ -998,10 +999,11 @@ MonoBehaviour:
   borning: 0
   enableBrain: 1
   debug: 0
-  maintainInputFile: 1
+  maintainInputFile: 0
   _chosenSensorConfigurations:
   - Player
   - fieldofView
+  - info
   AIFilesPath: C:/Users/miche/Desktop/TESI Artificial intelligenze and Unity/project
     NEW/Boss_Room-ThinkEngine/Assets/StreamingAssets\ThinkEngineer\ThinkEngine
   AIFilesPrefix:

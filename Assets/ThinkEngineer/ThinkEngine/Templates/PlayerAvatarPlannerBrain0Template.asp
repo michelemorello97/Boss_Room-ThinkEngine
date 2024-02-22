@@ -7,6 +7,8 @@
 %entity_x(fieldofView,objectIndex(Index),Index1,Value).
 %entity_y(fieldofView,objectIndex(Index),Index1,Value).
 %entity_z(fieldofView,objectIndex(Index),Index1,Value).
+%info_m_name(info_object,objectIndex(Index),Value).
+%info_m_id(info_object,objectIndex(Index),Value).
 % Predicates for Action invokation.
 % applyAction(OrderOfExecution,ActionClassName).
 % actionArgument(ActionOrder,ArgumentName, ArgumentValue).

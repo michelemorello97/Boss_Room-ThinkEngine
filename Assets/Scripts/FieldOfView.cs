@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.BossRoom.Gameplay.GameplayObjects.Character;
+using Unity.BossRoom.Gameplay.UserInput;
 using UnityEngine;
 
 namespace Unity.Multiplayer.Samples.BossRoom
@@ -69,6 +71,35 @@ namespace Unity.Multiplayer.Samples.BossRoom
                     }
                 }
             }
+            GameObject player = GameObject.Find("PlayerAvatar0");
+
+            if(player != null)
+            {
+                ClientInputSender script2 = player.GetComponent<ClientInputSender>();
+                FieldOfView fov = player.GetComponentInChildren<FieldOfView>();
+                if (fov != null)
+                {
+                    GameObject obj = fov.getAt(0);
+                    if (obj != null)
+                    {
+                        ServerCharacter servercharacter = obj.GetComponent<ServerCharacter>();
+                        if (servercharacter != null)
+                            script2.setTarget(servercharacter);
+                    }
+
+                }
+                else
+                {
+                    Debug.LogError("FieldOfView non trovato su PlayerAvatar.");
+                }
+            }
+        }
+
+        public GameObject getAt(int index)
+        {
+            if(index < view.Count)
+                return view[index];
+            return null;
         }
     }
 }
